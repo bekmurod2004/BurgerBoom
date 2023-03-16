@@ -50,7 +50,7 @@ fmt.Println()
 	}
 
 	if len(zakazlar) == 0 {
-		fmt.Println("Zakaz hali kemagam")
+		fmt.Println("Zakaz hali kemagan")
 		return
 	}
 

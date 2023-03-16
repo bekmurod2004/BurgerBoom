@@ -109,7 +109,7 @@ fmt.Println()
 			if ovqNomi == "yoq" {
 				Summer(yegindi, hammaOvq)
 
-				fmt.Println(yegindi)
+				// fmt.Println(yegindi)
 				act = false
 			}
 
@@ -133,7 +133,6 @@ func Summer(yegindi []string, hammaOvq []BorOvqatlar) {
 		for j := 0; j < len(hammaOvq); j++ {
 			if yegindi[i] == hammaOvq[j].Name {
 				summ += hammaOvq[j].Price
-				// fmt.Println(summ)
 
 			}
 		}
@@ -145,6 +144,10 @@ func Summer(yegindi []string, hammaOvq []BorOvqatlar) {
 }
 
 func Tashab(summ int, yegindi []string) {
+
+	if summ == 0 {
+		return
+	}
 
 	dat, err := ioutil.ReadFile("order.json")
 	if err != nil {
@@ -191,7 +194,7 @@ func Tashab(summ int, yegindi []string) {
 	}
 
 
-	fmt.Println(lol)
+	// fmt.Println(lol)
 
 }
 
